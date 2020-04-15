@@ -4,7 +4,6 @@
 
 using System.Text.Json;
 using NodaTime.Serialization.SystemTextJson;
-using NodaTime.Utility;
 using NUnit.Framework;
 using static NodaTime.Serialization.Test.SystemText.TestHelper;
 
@@ -135,8 +134,8 @@ namespace NodaTime.Serialization.Test.SystemText
         {
             string json = "{\"Interval\":{\"Start\":\"2012-01-02\",\"End\":\"2013-06-07\"}}";
 
-            var testObjectPascalCase = JsonSerializer.Deserialize<TestObject>(json, optionsCaseInsensitive);;
-            var testObjectCamelCase = JsonSerializer.Deserialize<TestObject>(json, optionsCamelCaseCaseInsensitive); ;
+            var testObjectPascalCase = JsonSerializer.Deserialize<TestObject>(json, optionsCaseInsensitive);
+            var testObjectCamelCase = JsonSerializer.Deserialize<TestObject>(json, optionsCamelCaseCaseInsensitive);
 
             var intervalPascalCase = testObjectPascalCase.Interval;
             var intervalCamelCase = testObjectCamelCase.Interval;

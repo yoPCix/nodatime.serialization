@@ -7,7 +7,6 @@ using static NodaTime.Serialization.Test.JsonNet.TestHelper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using NodaTime.Serialization.JsonNet;
-using NodaTime.Utility;
 using NUnit.Framework;
 
 namespace NodaTime.Serialization.Test.JsonNet
